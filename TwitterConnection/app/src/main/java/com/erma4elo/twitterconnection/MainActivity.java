@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         TwitterConfig config = new TwitterConfig.Builder(this)
                 .logger(new DefaultLogger(Log.DEBUG))
-                .twitterAuthConfig(new TwitterAuthConfig("7mRgolOvMQgTK6aRdvma23t1o", "WXGwb79AR9qwKMWRXAVrEI8gXMZimz7TfS50Ix2KH0uvS4tpcx"))
+                .twitterAuthConfig(new TwitterAuthConfig("7onjbfSsG19s8QtbPwvbduYbe", "AccrUCxOOxCc1D4Fa5HxJbKVLOgKDUyEEM0JUahCxBtA5jXoks"))
                 .debug(true)
                 .build();
         Twitter.initialize(config);
@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(MainActivity.this, TweetsList.class);
                 intent.putExtra("userName", result.data.getUserName());
+                intent.putExtra("userId", result.data.getUserId());
                 startActivity(intent);
                 finish();
 

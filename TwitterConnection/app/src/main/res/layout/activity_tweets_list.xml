@@ -12,27 +12,18 @@
         android:layout_height="match_parent"
         android:layout_above="@+id/addNewTweet">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <ProgressBar
-                android:id="@id/android:empty"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true" />
-
-            <ListView
-                android:id="@id/android:list"
+            <ListView android:id="@id/android:list"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:divider="#e1e8ed"
                 android:dividerHeight="1dp"
-                android:drawSelectorOnTop="false" />
-        </RelativeLayout>
+                android:drawSelectorOnTop="false"/>
     </android.support.v4.widget.SwipeRefreshLayout>
 
+    <ProgressBar android:id="@id/android:empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
     <Button
         android:id="@+id/addNewTweet"
         android:layout_width="match_parent"

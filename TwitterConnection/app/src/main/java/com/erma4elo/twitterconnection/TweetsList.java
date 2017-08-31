@@ -33,12 +33,14 @@ public class TweetsList extends ListActivity {
         setContentView(R.layout.activity_tweets_list);
 
         String name = getIntent().getStringExtra("userName");
+        long userId = getIntent().getLongExtra("userId",0);
 
         Button buttonAddNewTweet = (Button) findViewById(R.id.addNewTweet);
         swipeRefresh = (SwipeRefreshLayout) findViewById(R.id.swipeRefresh);
 
         userTimeline = new UserTimeline.Builder()
                 .screenName(name)
+                .userId(userId)
                 .build();
         adapter = new TweetTimelineListAdapter.Builder(this)
                 .setTimeline(userTimeline)
